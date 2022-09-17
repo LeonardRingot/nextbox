@@ -1,6 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Footer from "../composants/Footer.js";
+import AudioSlider from "../composants/AudioSlider";
+import Ttiel from "../composants/Title";
 
 export default function Home() {
   return (
