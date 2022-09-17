@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Footer from "../composants/Footer.js";
-import AudioSlider from "../composants/AudioSlider.js";
-import Title from "../composants/Title.js";
-import styles from "../styles/indexpage.css";
+import Footer from '../composants/Footer'
+import AudioSlider from '../composants/AudioSlider'
+import Title from '../composants/Title'
+import styles from '../styles/indexpage.css'
 
 export default function Home() {
   return (
@@ -21,7 +21,9 @@ export default function Home() {
 
       <AudioSlider />
         
-      
+      <footer>
+
+      </footer>
 
       <footer className={styles.footer}>
         <a
