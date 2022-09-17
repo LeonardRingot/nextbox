@@ -18,6 +18,8 @@ export default function Home() {
       <main>
         <h1 className='titre'>NextBox</h1>
       </main>
+
+      <AudioSlider />
         
       
 
