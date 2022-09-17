@@ -1,4 +1,4 @@
-import styles from '../styles/AudioSlider.module.css';
+import styles from '../styles/AudioSlider.module.css'
 
 export default function AudioSlider()
 {
