@@ -59,6 +59,10 @@ export default function SliderAudio() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <AudioPlayer music={currentMusic.src} />
+      <p className={Style.right}>
+        <b> {afficheCurrent(currentMusic.src)} </b>
+      </p>
     </>
   );
 }
