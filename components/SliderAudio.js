@@ -51,7 +51,7 @@ export default function SliderAudio() {
           <SwiperSlide key={index}>{
               <Image
                 src={music.img}
-                height={500}
+                height={800}
                 width={800}
               />
             }
