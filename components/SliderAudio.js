@@ -41,7 +41,7 @@ export default function SliderAudio() {
   return (
     <>
       <Swiper
-        spaceBetween={80}
+        spaceBetween={50}
         slidesPerView={3}
         pagination={{ clickable: true }}
         className="mySwiper"
@@ -51,8 +51,8 @@ export default function SliderAudio() {
           <SwiperSlide key={index}>{
               <Image
                 src={music.img}
-                height={500}
-                width={500}
+                height={800}
+                width={800}
               />
             }
 {music.title}
