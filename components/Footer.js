@@ -15,7 +15,7 @@ export default function Footer() {
           <span>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>{" "}
-          par Léonard Ringot
+          par Léonard Ringot UPDATE REPRISE
         </a>
         
         <Link href="about"> about </Link>
