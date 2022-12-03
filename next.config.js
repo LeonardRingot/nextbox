@@ -8,5 +8,5 @@ module.exports = {
   reactStrictMode: true,
   images: {
     domains: ['localhost', 'placeimg.com'],
-  },
+  }
 }

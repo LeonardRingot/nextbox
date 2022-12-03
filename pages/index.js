@@ -5,15 +5,6 @@ import Title from '../components/Title'
 
 export default function Home() {
 
-  let user = {
-    id: 1,
-    nom: "Ringot",
-    prenom: "léonard",
-    email: "leonardringot6@gmail.com",
-    isAdmin: true
-  }
-
-
   return (
     <div>
       <Head>

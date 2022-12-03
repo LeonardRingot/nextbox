@@ -6,6 +6,7 @@ import { Pagination } from "swiper";
 import Style from "../styles/SlideAudio.module.css";
 import AudioPlayer from "./AudioPlayer";
 import Image from "next/image";
+import Vinyle from "./Vinyle";
 
 export default function SliderAudio() {
   const fetchAllMusics = async () => {
@@ -21,10 +22,10 @@ export default function SliderAudio() {
 
   const [allMusics, setAllMusics] = useState([]);
   const [currentMusic, setCurrentMusic] = useState({});
+  const [play, setPlay] = useState(false);
 
   const selectMusic = (e) => {
     const index = Number(e.currentTarget.dataset.id);
-    //console.log(allMusics[index].src);
     setCurrentMusic(allMusics[index]);
   };
 
@@ -41,28 +42,36 @@ export default function SliderAudio() {
   return (
     <>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
+        spaceBetween={10}
+        slidesPerView={2}
+        centeredSlides={true}
         pagination={{ clickable: true }}
-        className="mySwiper"
+        className={Style.swiper}
         modules={[Pagination]}
         >
         {allMusics.map((music, index) => (
-          <SwiperSlide key={index}>{
+          <SwiperSlide className={Style.swiperSlide} key={index}>{
               <Image
                 src={music.img}
-                height={800}
-                width={800}
+                alt={music.title}
+                layout="fill"
+                
               />
-            }
-{music.title}
+          }
+              <div className={Style.title}>
+              <h2 className={Style.h2} data-id={index} onClick={selectMusic}>
+                {music.title}
+              </h2>
+            </div>
+            
           </SwiperSlide>
         ))}
       </Swiper>
-      <AudioPlayer music={currentMusic.src} />
+      <AudioPlayer music={currentMusic.src} setPlay={setPlay} />
       <p className={Style.right}>
         <b> {afficheCurrent(currentMusic.src)} </b>
       </p>
+      {play ? <Vinyle props= {currentMusic}></Vinyle> : " "}
     </>
   );
 }
